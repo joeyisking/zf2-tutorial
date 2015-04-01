@@ -1,4 +1,4 @@
- namespace Album\Form;
+<?php  namespace Album\Form;
 
  use Zend\Form\Form;
 
