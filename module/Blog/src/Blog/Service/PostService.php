@@ -32,6 +32,6 @@ namespace Blog\Service;
       */
      public function findPost($id)
      {
-         return $this->postMapper->findAll($id);
+		return $this->postMapper->find($id);
      }
  }
