@@ -3,6 +3,8 @@
 namespace Blog\Service;
 
  use Blog\Mapper\PostMapperInterface;
+ use Blog\Model\Post;
+ use Blog\Model\PostInterface;
 
  class PostService implements PostServiceInterface
  {
@@ -34,4 +36,18 @@ namespace Blog\Service;
      {
 		return $this->postMapper->find($id);
      }
+
+     /**
+      * {@inheritDoc}
+      */
+     public function savePost(PostInterface $post)
+     {
+         return $this->postMapper->save($post);
+     }
+
+     public function deletePost(PostInterface $post)
+     {
+         return $this->postMapper->delete($post);
+     }
+
  }

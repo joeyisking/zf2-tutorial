@@ -17,4 +17,15 @@ namespace Blog\Mapper;
       * @return array|PostInterface[]
       */
      public function findAll();
+
+	 public function save(PostInterface $postObject);
+
+     /**
+      * @param PostInterface $postObject
+      *
+      * @return bool
+      * @throws \Exception
+      */
+     public function delete(PostInterface $postObject);
+
  }
